@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 25px;
+    padding: 20px;
+}
+

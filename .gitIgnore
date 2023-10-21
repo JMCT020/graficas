@@ -1,0 +1,16 @@
+# Ignorar la carpeta node_modules
+*/node_modules
+
+*/package-lock.json
+
+# Ignorar archivos de configuración locales
+*/.env
+
+# Ignorar archivos de construcción
+*/build
+
+# Ignorar archivos temporales
+*/.DS_Store
+
+# Ignorar archivos de logs
+*/*.log
