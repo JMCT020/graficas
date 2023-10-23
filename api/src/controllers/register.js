@@ -1,7 +1,7 @@
 import db from "../database/index.js"
 
-const register = async (name, res) => {
-  const { name, lastname, birthdate, user, password } = name;
+const register = async (data, res) => {
+  const { name, lastname, birthdate, user, password } = data;
     db.query(`
     SELECT * FROM usuarios WHERE user = ?`, 
     [user], 
@@ -17,7 +17,7 @@ const register = async (name, res) => {
       } else {
         db.query(`
         INSERT INTO usuarios (name, lastname, birthdate, user, password)
-        VALUES ("${name.name}","${name.lastname}", "${name.birthdate}","${name.user}","${name.password}")`, (error, results) => {
+        VALUES ("${name}","${lastname}", "${birthdate}","${user}","${password}")`, (error, results) => {
         if (error) {
           console.error('Error al ejecutar la consulta: ', error);
           res.status(500).send('Error interno del servidor');
